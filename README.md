@@ -22,6 +22,4 @@ A clean, modern, and fully responsive portfolio built for showcasing projects, s
 | [lucide-react](https://lucide.dev/)  | Icon library                          |
 | [Vercel](https://vercel.com/)        | Hosting and deployment                |
 
----
 
-## 📁 File Structure Highlights
