@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 270 100% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 270 50% 96%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 270 50% 96%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 270 100% 10%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 270 50% 3%;
+    --foreground: 0 0% 98%;
+    --card: 270 50% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 270 50% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 270 100% 60%;
+    --primary-foreground: 270 50% 3%;
+    --secondary: 270 50% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 270 50% 12%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 270 50% 12%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 50% 12%;
+    --input: 270 50% 12%;
+    --ring: 270 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.cosmic-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url("/images/cosmic-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+.flip-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(8, 0, 16, 0.7);
+}
+
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: hsl(var(--primary));
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .timeline-container::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(180, 70, 255, 0.5), 0 0 20px rgba(180, 70, 255, 0.3), 0 0 30px rgba(180, 70, 255, 0.1);
+}
+
+.cosmic-card {
+  background: rgba(8, 0, 16, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(180, 70, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 10px rgba(180, 70, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cosmic-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 15px rgba(180, 70, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.skill-pill {
+  background: rgba(120, 70, 200, 0.3);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin: 0.25rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(120, 70, 200, 0.2);
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(140, 90, 220, 0.4);
+  border-color: rgba(140, 90, 220, 0.3);
+  transform: translateY(-1px);
+}
+
+.section-transition {
+  position: relative;
+  z-index: 1;
+}
+
+.section-transition::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(8, 0, 16, 0.5));
+  z-index: -1;
+}
+
+.section-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(8, 0, 16, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(180, 70, 255, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(180, 70, 255, 0.2);
+}
+
+.skill-category {
+  background: rgba(8, 0, 16, 0.7);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid rgba(180, 70, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 0 15px rgba(180, 70, 255, 0.15);
+}
+
+.profile-image {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(180, 70, 255, 0.3);
+  box-shadow: 0 0 20px rgba(180, 70, 255, 0.2);
+}
+
+.section-observer {
+  min-height: 100vh;
+}
+
+/* Apple-inspired typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Improved button styles */
+.btn-primary {
+  background: linear-gradient(135deg, rgba(140, 70, 220, 0.9), rgba(120, 50, 200, 0.9));
+  border: none;
+  box-shadow: 0 4px 15px rgba(120, 50, 200, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(120, 50, 200, 0.4);
+}
+
+/* Experience tree animations */
+@keyframes leafGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(180, 120, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(180, 120, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(180, 120, 255, 0.3);
+  }
+}
+
+.leaf-card {
+  animation: leafGlow 3s infinite;
+}
+
+.leaf-card:hover {
+  animation: leafGlow 1.5s infinite;
+}
+
