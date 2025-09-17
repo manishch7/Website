@@ -7,30 +7,42 @@ import { useIsMobile } from "@/hooks/use-mobile"
 
 const experiences = [
   {
-    company: "Kroll Settlement Administration",
-    position: "Data Analyst",
+    company: "Humanitarians AI",
+    position: "Data and AI Engineer",
+    period: "Sep 2025 – Present",
+    location: "Boston, MA",
+    responsibilities: [
+      "Building AI Job Search Agents using RAG, LLM, LangChain, and Cloud Data Warehouse technologies to create intelligent job matching systems.",
+      "Responsible for developing comprehensive data pipelines for job and resume data processing, ensuring efficient data flow and transformation across multiple systems.",
+      "Applying Large Language Models (LLMs) for advanced text understanding and natural language processing to extract meaningful insights from job descriptions and resumes.",
+      "Implementing Retrieval Augmented Generation (RAG) systems for intelligent job matching, combining semantic search with generative AI to provide personalized job recommendations.",
+      "Creating autonomous agents for automation and real-time user interaction, enabling seamless user experiences and reducing manual intervention in job search processes.",
+    ],
+  },
+  {
+    company: "Kroll",
+    position: "Data Executive",
     period: "Sep 2022 – Jul 2023",
     location: "Mumbai, Maharashtra, India",
     responsibilities: [
-      "Architected end-to-end Python data pipelines for processing complex legal settlement claims, resulting in 30% improved case processing efficiency and reduced operational bottlenecks.",
-      "Engineered a sophisticated fraud detection system combining supervised learning algorithms with anomaly detection techniques to identify irregular patterns in legal claims, significantly enhancing compliance accuracy.",
-      "Designed intuitive Power BI dashboards with dynamic visualizations of case status and risk indicators, enabling stakeholders to monitor high-value settlements in real-time and make data-driven decisions.",
-      "Collaborated cross-functionally with legal teams to extract actionable insights from claimant data through advanced statistical analysis and exploratory data techniques, directly influencing case strategy.",
-      "Implemented automated data validation protocols with intelligent quality checks, substantially reducing manual review time and minimizing human error in the settlement process.",
+      "Engineered ETL pipelines by ingesting settlement data into AWS S3, orchestrating workflows with Airflow and applying Spark and SQL transformations for reconciliation and validation.",
+      "Integrated LexisNexis APIs and developed reconciliation scripts to strengthen compliance workflows before loading datasets into Snowflake, fast-tracking the process by reducing manual intervention for reviews.",
+      "Designed Snowflake data models with star schema and SCD Type 2 pipelines, enabling audit-ready compliance and finance reporting.",
+      "Implemented data masking using tokenization and hashing and enforced column-level RBAC, ensuring secure access for compliance and finance teams while supporting analyst dashboards.",
+      "Applied Redis query caching to accelerate compliance dashboard performance, improving responsiveness for audit and risk users.",
     ],
   },
   {
     company: "BLC Logistics",
-    position: "Jr. Data Scientist",
+    position: "Analyst",
     period: "May 2020 – Aug 2022",
     location: "Mumbai, Maharashtra, India",
     responsibilities: [
-      "Developed sophisticated predictive maintenance models leveraging time-series analysis to forecast vehicle maintenance needs with high accuracy, significantly improving fleet uptime and reducing unexpected breakdowns.",
-      "Constructed a robust ETL pipeline with Airflow that seamlessly integrated real-time traffic and fuel consumption data, enabling intelligent route optimization that reduced transportation costs by 20%.",
-      "Implemented advanced SQL-based inventory analytics that transformed raw data into actionable intelligence, enhancing warehouse stock turnover through precise demand forecasting algorithms.",
-      "Crafted interactive dashboards using Python (Flask, Matplotlib) that visualized critical fleet performance metrics, providing operations teams with comprehensive insights for strategic decision-making.",
-      "Pioneered an AWS-powered system for processing IoT sensor data from fleet vehicles, eliminating manual collection processes while enabling real-time shipment tracking and monitoring.",
-      "Spearheaded collaboration with logistics managers to identify and implement data-driven optimization opportunities, resulting in measurable improvements in delivery performance and customer satisfaction.",
+      "Built near-real-time GPS tracking pipeline using Kafka streams and Redis caching for operations team route optimization, reducing query response time by 65%.",
+      "Automated finance team invoice reconciliation with AWS Lambda and Talend mapping, matching delivery confirmations to billing data and reducing manual work significantly.",
+      "Developed dual-stream architecture processing GPS data for operations and invoice workflows for finance, utilizing Snowflake Tasks and Streams for automated ETL.",
+      "Created department-specific dashboards in Power BI combining GPS analytics for operations and financial KPIs for finance, reducing logistics costs by 12% YoY.",
+      "Implemented Airflow orchestration managing separate data pipelines for operations GPS feeds and finance billing workflows, ensuring reliable cross-system validation.",
     ],
   },
   {
@@ -272,4 +284,3 @@ export default function ExperienceTree() {
     </section>
   )
 }
-

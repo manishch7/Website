@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Manish Choudhary | Data Scientist",
   description: "Portfolio of Manish Choudhary, Data Scientist",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -33,7 +33,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'

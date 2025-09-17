@@ -148,4 +148,3 @@ export default function ProjectCard({ title, description, technologies, location
     </div>
   )
 }
-

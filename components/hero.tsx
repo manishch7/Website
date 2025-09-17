@@ -21,11 +21,14 @@ export default function Hero() {
       >
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight glow-text">Manish Choudhary</h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Data Scientist</h2>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight glow-text">
+              Manish Bansilal Choudhary
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Data and AI Engineer</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Data Scientist with experience delivering machine learning solutions for legal-tech and logistics sectors.
-              Expert in building data pipelines and predictive models that enhance operational efficiency.
+              Data and AI Engineer with industry experience in SQL, Python, and BI dashboards, combined with academic
+              expertise in ML, NLP, and cloud. Skilled in AWS, Snowflake, Spark, Kafka and Airflow to build scalable,
+              audit-ready pipelines and analytics solutions supporting compliance-driven environments.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
@@ -46,7 +49,7 @@ export default function Hero() {
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center backdrop-blur-sm">
             <Image
               src="/profile-image.png"
-              alt="Manish Choudhary"
+              alt="Manish Bansilal Choudhary"
               width={240}
               height={240}
               className="profile-image w-44 h-44 md:w-60 md:h-60"
@@ -58,4 +61,3 @@ export default function Hero() {
     </section>
   )
 }
-

@@ -78,4 +78,3 @@ export default function FlipCard({ title, icon, description, technologies }: Fli
     </div>
   )
 }
-
