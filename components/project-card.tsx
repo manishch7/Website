@@ -71,10 +71,10 @@ export default function ProjectCard({ title, description, technologies, location
         <Card
           className="flip-card-front absolute w-full h-full flex flex-col items-center justify-center p-6 overflow-hidden"
           style={{
-            background: "rgba(8, 0, 16, 0.7)",
-            backdropFilter: "blur(12px)",
-            border: "1px solid rgba(180, 70, 255, 0.1)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1), 0 0 10px rgba(180, 70, 255, 0.1)",
+            background: "rgba(0, 0, 0, 0.7)",
+            backdropFilter: "blur(16px)",
+            border: "1px solid rgba(160, 60, 255, 0.15)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.25), 0 0 12px rgba(160, 60, 255, 0.08)",
           }}
         >
           {/* Aurora background image */}
@@ -113,10 +113,10 @@ export default function ProjectCard({ title, description, technologies, location
         <Card
           className="flip-card-back absolute w-full h-full overflow-auto p-6"
           style={{
-            background: "rgba(8, 0, 16, 0.7)",
-            backdropFilter: "blur(12px)",
-            border: "1px solid rgba(180, 70, 255, 0.1)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1), 0 0 10px rgba(180, 70, 255, 0.1)",
+            background: "rgba(0, 0, 0, 0.7)",
+            backdropFilter: "blur(16px)",
+            border: "1px solid rgba(160, 60, 255, 0.15)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.25), 0 0 12px rgba(160, 60, 255, 0.08)",
           }}
         >
           {/* Aurora background image */}

@@ -175,9 +175,9 @@ export default function ExperienceTree() {
                             <div
                               className="p-5 backdrop-blur-md flex items-center gap-4"
                               style={{
-                                background: "rgba(30, 10, 60, 0.7)",
-                                border: "1px solid rgba(180, 120, 255, 0.3)",
-                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2), 0 0 15px rgba(180, 70, 255, 0.2)",
+                                background: "rgba(0, 0, 0, 0.7)",
+                                border: "1px solid rgba(160, 60, 255, 0.2)",
+                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(160, 60, 255, 0.15)",
                               }}
                             >
                               <div
@@ -186,13 +186,13 @@ export default function ExperienceTree() {
                                   backgroundImage: "url(/images/aurora-background.jpeg)",
                                   backgroundSize: "cover",
                                   backgroundPosition: "center",
-                                  border: "1px solid rgba(180, 120, 255, 0.3)",
+                                  border: "1px solid rgba(160, 60, 255, 0.25)",
                                 }}
                               >
                                 <Briefcase className="h-6 w-6 text-white" />
                               </div>
                               <div className="flex-1">
-                                <h3 className="font-semibold text-white text-lg">{experience.position}</h3>
+                                <h3 className="font-semibold text-white text-lg glow-text">{experience.position}</h3>
                                 <p className="text-white/80">{experience.company}</p>
                                 <p className="text-sm text-white/60 mt-1">{experience.period}</p>
                               </div>
@@ -206,10 +206,10 @@ export default function ExperienceTree() {
                           <Card
                             className="p-6 relative overflow-hidden"
                             style={{
-                              background: "rgba(20, 5, 40, 0.85)",
-                              backdropFilter: "blur(12px)",
-                              border: "1px solid rgba(180, 120, 255, 0.3)",
-                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(180, 70, 255, 0.3)",
+                              background: "rgba(0, 0, 0, 0.8)",
+                              backdropFilter: "blur(16px)",
+                              border: "1px solid rgba(160, 60, 255, 0.2)",
+                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(160, 60, 255, 0.2)",
                             }}
                           >
                             <button
@@ -230,7 +230,7 @@ export default function ExperienceTree() {
                                     backgroundImage: "url(/images/aurora-background.jpeg)",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    border: "1px solid rgba(180, 120, 255, 0.3)",
+                                    border: "1px solid rgba(160, 60, 255, 0.25)",
                                   }}
                                 >
                                   <Briefcase className="h-6 w-6 text-white" />

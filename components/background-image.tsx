@@ -13,7 +13,7 @@ export default function BackgroundImage() {
           objectFit: "cover",
         }}
       />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
     </div>
   )
 }
