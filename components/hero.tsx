@@ -24,11 +24,12 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight glow-text">
               Manish Bansilal Choudhary
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Data and AI Engineer</h2>
+            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Senior Data Analyst</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Data and AI Engineer with industry experience in SQL, Python, and BI dashboards, combined with academic
-              expertise in ML, NLP, and cloud. Skilled in AWS, Snowflake, Spark, Kafka and Airflow to build scalable,
-              audit-ready pipelines and analytics solutions supporting compliance-driven environments.
+              Senior Data Analyst with 3+ years of experience delivering SQL analytics, Power BI dashboards, and
+              automated data pipelines across finance, compliance, and operations. Proven expertise in data validation,
+              reconciliation, and KPI reporting for high-volume environments. Strong background in Snowflake, Python
+              ETL, API-driven automation, and applying GenAI to enhance analytics workflows and intelligent reporting.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button

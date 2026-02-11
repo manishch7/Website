@@ -13,9 +13,11 @@ interface ProjectCardProps {
   technologies: string[]
   location: string
   icon: React.ReactNode
+  github?: string
+  medium?: string
 }
 
-export default function ProjectCard({ title, description, technologies, location, icon }: ProjectCardProps) {
+export default function ProjectCard({ title, description, technologies, location, icon, github, medium }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
   const isMobile = useIsMobile()
@@ -138,10 +140,24 @@ export default function ProjectCard({ title, description, technologies, location
                 </span>
               ))}
             </div>
-            <Button variant="link" className="p-0 h-auto text-primary flex items-center gap-1 mt-auto">
-              <Github className="h-4 w-4" />
-              View on GitHub
-            </Button>
+            <div className="flex items-center gap-3 mt-auto">
+              {github && (
+                <a href={github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <Button variant="link" className="p-0 h-auto text-primary flex items-center gap-1">
+                    <Github className="h-4 w-4" />
+                    GitHub
+                  </Button>
+                </a>
+              )}
+              {medium && (
+                <a href={medium} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <Button variant="link" className="p-0 h-auto text-primary flex items-center gap-1">
+                    <Info className="h-4 w-4" />
+                    Medium
+                  </Button>
+                </a>
+              )}
+            </div>
           </div>
         </Card>
       </div>
