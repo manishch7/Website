@@ -7,19 +7,10 @@ import { GraduationCap } from "lucide-react"
 const education = [
   {
     school: "Northeastern University",
-    location: "Boston, MA",
-    degree: "Master's, Data Architecture and Management",
-    period: "Expected May 2025",
-    gpa: "GPA: 3.6",
-    courses:
-      "Prompt Engineering & AI, LLM with Knowledge Graph DB, Generative AI with Applications in Data Engineering, Parallel Machine Learning & AI",
-  },
-  {
-    school: "University of Mumbai",
-    location: "Mumbai, India",
-    degree: "Bachelor's, Management Studies",
-    period: "Jun 2018 – Apr 2021",
-    gpa: "GPA: 3.7",
+    location: "Boston, MA, USA",
+    degree: "Master of Science in Data Science",
+    period: "May 2025",
+    gpa: "",
     courses: "",
   },
 ]
@@ -31,7 +22,7 @@ export default function Education() {
     <section id="education" ref={sectionRef} className="py-20 min-h-screen flex items-center">
       <div className="container max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-on-scroll glow-text">Education</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 max-w-2xl mx-auto gap-6">
           {education.map((edu, index) => (
             <div key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 150}ms` }}>
               <Card className="p-6 cosmic-card h-full">
