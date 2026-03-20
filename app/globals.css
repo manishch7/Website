@@ -76,6 +76,19 @@ html {
   scroll-padding-top: 5rem;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
 .flip-card {
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -150,15 +163,37 @@ html {
 }
 
 .glow-text {
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.5), 0 0 24px rgba(255, 255, 255, 0.25);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 24px rgba(255, 255, 255, 0.2), 0 0 48px rgba(255, 255, 255, 0.1);
+}
+
+@supports (text-decoration: underline) {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
 }
 
 .cosmic-card {
   background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 1px 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.cosmic-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.cosmic-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .cosmic-card:hover {
@@ -278,11 +313,21 @@ h6 {
 
 /* Improved button styles */
 .btn-primary {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(220, 220, 220, 0.95));
-  color: #000;
-  border: none;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(200, 200, 200, 0.95), rgba(180, 180, 180, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(220, 220, 220, 0.98), rgba(200, 200, 200, 0.98));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 .btn-primary:hover {

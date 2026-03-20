@@ -14,92 +14,57 @@ export default function Contact() {
     <section id="contact" ref={sectionRef} className="py-20 min-h-screen flex items-center">
       <div className="container max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-on-scroll glow-text">Contact</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="animate-on-scroll">
-            <Card className="p-6 cosmic-card h-full">
-              <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <a href="mailto:manishbch07@gmail.com" className="text-sm hover:text-primary">
-                    manishbch07@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:6173314105" className="text-sm hover:text-primary">
-                    617-331-4105
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                  <a
-                    href="https://www.linkedin.com/in/manish-choudhary-bch7/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:text-primary"
-                  >
-                    linkedin.com/in/manish-choudhary-bch7
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Github className="h-5 w-5 text-primary" />
-                  <a
-                    href="https://github.com/manishch7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:text-primary"
-                  >
-                    github.com/manishch7
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <FileText className="h-5 w-5 text-primary" />
-                  <a
-                    href="https://medium.com/@choudhary.man"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:text-primary"
-                  >
-                    medium.com/@choudhary.man
-                  </a>
-                </div>
+        <div className="max-w-2xl mx-auto animate-on-scroll">
+          <Card className="p-8 cosmic-card">
+            <h3 className="text-2xl font-semibold mb-8">Get In Touch</h3>
+            <div className="space-y-5">
+              <div className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                <Mail className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
+                <a href="mailto:manishbch07@gmail.com" className="text-base hover:text-white transition-colors">
+                  manishbch07@gmail.com
+                </a>
               </div>
-            </Card>
-          </div>
-          <div className="animate-on-scroll" style={{ animationDelay: "150ms" }}>
-            <Card className="p-6 cosmic-card">
-              <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <Input
-                    type="text"
-                    placeholder="Name"
-                    className="bg-background/20 border-white/15 backdrop-blur-sm"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    className="bg-background/20 border-white/15 backdrop-blur-sm"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Textarea
-                    placeholder="Message"
-                    className="bg-background/20 border-primary/20 backdrop-blur-sm min-h-[120px]"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full rounded-full bg-white/90 hover:bg-white text-black backdrop-blur-sm"
+              <div className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                <Phone className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
+                <a href="tel:6173314105" className="text-base hover:text-white transition-colors">
+                  +1 (617) 331-4105
+                </a>
+              </div>
+              <div className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                <Linkedin className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
+                <a
+                  href="https://www.linkedin.com/in/manish-choudhary-bch7/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base hover:text-white transition-colors"
                 >
-                  Send Message
-                </Button>
-              </form>
-            </Card>
-          </div>
+                  LinkedIn
+                </a>
+              </div>
+              <div className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                <Github className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
+                <a
+                  href="https://github.com/manishch7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base hover:text-white transition-colors"
+                >
+                  GitHub
+                </a>
+              </div>
+              <div className="flex items-center gap-4 group cursor-pointer transition-all hover:translate-x-1">
+                <FileText className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
+                <a
+                  href="https://medium.com/@choudhary.man"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base hover:text-white transition-colors"
+                >
+                  Medium
+                </a>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ export default function Hero() {
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-white glow-text">Founder & AI/Data Engineer</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Building production-grade AI systems and data platforms. Currently scaling EarlyApply.io — a job intelligence platform serving 170+ users with 1000+ visitors and 3.5+ pages visited in 3 weeks. 3+ years shipping data pipelines, LLM integrations, and cloud infrastructure across compliance, logistics, and AI. Expertise in Python ETL, GCP Cloud Run, Supabase, Gemini 2.0, and autonomous scraping at scale.
+              Building production-grade AI systems and data platforms. Currently scaling EarlyApply.io, a job intelligence platform serving 170+ users with 1000+ visitors and 3.5+ pages visited in 3 weeks. 3+ years shipping data pipelines, LLM integrations, and cloud infrastructure across compliance, logistics, and AI. Expertise in Python ETL, GCP Cloud Run, Supabase, Gemini 2.0, and autonomous scraping at scale.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button

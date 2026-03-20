@@ -9,7 +9,7 @@ const experiences = [
   {
     company: "EarlyApply.io",
     position: "Founder & Solo Engineer",
-    period: "Jan 2026 – Present",
+    period: "Jan 2026 - Present",
     location: "San Jose, CA",
     responsibilities: [
       "Architected and shipped live job intelligence platform solo: async Python scraper across 6 ATS portals (Greenhouse, Lever, Ashby, Workday, Oracle, Icims) via 200 concurrent requests every 15 min on GCP Cloud Run, Cloud Scheduler, and Cloud Build CI/CD.",
@@ -20,7 +20,7 @@ const experiences = [
   {
     company: "Humanitarians AI",
     position: "Data & AI Engineer",
-    period: "Sep 2025 – Present",
+    period: "Sep 2025 - Present",
     location: "Remote, USA",
     responsibilities: [
       "Built Python ETL pipelines ingesting 100K+ SEC EDGAR filings and visa datasets into Snowflake, generating 30K+ employer leads with 80% reduction in manual research time.",
@@ -30,7 +30,7 @@ const experiences = [
   {
     company: "Kroll",
     position: "Data Analyst, Compliance & Reporting",
-    period: "Sep 2022 – Jul 2023",
+    period: "Sep 2022 - Jul 2023",
     location: "Mumbai, IN",
     responsibilities: [
       "Supported end-to-end data operations for T-Mobile's $350M data breach settlement affecting 76M customers, delivering validation reports and compliance dashboards that passed all audits with zero findings.",
@@ -42,7 +42,7 @@ const experiences = [
   {
     company: "BLC Logistics",
     position: "Data Analyst, Operations & BI",
-    period: "May 2020 – Aug 2022",
+    period: "May 2020 - Aug 2022",
     location: "Mumbai, IN",
     responsibilities: [
       "Analyzed delivery delays by integrating dispatch records, GPS tracking data, and vendor performance reports, enabling operations teams to identify root causes and significantly improve issue resolution speed.",
@@ -55,7 +55,7 @@ const experiences = [
   {
     company: "Motilal Oswal Financial Services",
     position: "Research Analyst Intern",
-    period: "Apr 2019 – Jul 2019",
+    period: "Apr 2019 - Jul 2019",
     location: "Thane, IN",
     responsibilities: [
       "Conducted equity research by analyzing company financial statements, macroeconomic indicators, and sector trends to support valuation analysis, investment decision making, and long-term portfolio recommendations for retail investors.",
