@@ -25,7 +25,7 @@ const projects = [
     title: "EarlyApply.io - Production Job Intelligence Platform",
     icon: <Rocket />,
     description:
-      "🚀 Live platform serving 100+ users with 1000+ monthly visitors, 3.5+ pages visited per session in 3 weeks (zero paid marketing). Architected async Python scraper across 6 ATS portals (Greenhouse, Lever, Ashby, Workday, Oracle, Icims) via 200 concurrent requests every 15 min on GCP Cloud Run. Engineered Gemini 2.0 Flash classification pipeline processing 45K+ jobs, extracting visa sponsorship, location, and experience signals into Supabase PostgreSQL. Built Next.js 14 frontend with Supabase Auth, real-time filtering, PDF.js resume extraction, AI outreach generator, and full activity tracking.",
+      "Live platform serving 100+ users with 1000+ monthly visitors, 3.5+ pages visited per session in 3 weeks (zero paid marketing). Architected async Python scraper across 6 ATS portals (Greenhouse, Lever, Ashby, Workday, Oracle, Icims) via 200 concurrent requests every 15 min on GCP Cloud Run. Engineered Gemini 2.0 Flash classification pipeline processing 45K+ jobs, extracting visa sponsorship, location, and experience signals into Supabase PostgreSQL. Built Next.js 14 frontend with Supabase Auth, real-time filtering, PDF.js resume extraction, AI outreach generator, and full activity tracking.",
     technologies: ["Next.js 14", "Python", "GCP Cloud Run", "Supabase", "Gemini 2.0", "Playwright", "Tavily", "GPT-4o"],
     location: "San Jose, CA",
     github: "https://github.com/manishch7/earlyapply",
@@ -36,7 +36,7 @@ const projects = [
     title: "TruthDNA - Autonomous Misinformation Detection",
     icon: <Zap />,
     description:
-      "Async pipeline using Tavily (14 sources), GLiNER2 NER (12 entity types), and Reka Vision API processing claims in under 12 seconds. Self-improving Neo4j knowledge graph with confidence-weighted risk scoring and GPT-4o-mini verdict scoring (0-100%) via Streamlit UI and HTML reports.",
+      "Built in 4.5 hours at AWS Hackathon. Async pipeline using Tavily (14 sources), GLiNER2 NER (12 entity types), and Reka Vision API processing claims in under 12 seconds with structured verdict output. Self-improving Neo4j knowledge graph with confidence-weighted risk scoring and GPT-4o-mini verdict scoring (0-100%) via Streamlit UI and HTML reports.",
     technologies: ["Python", "Tavily", "GLiNER2", "Reka Vision", "Neo4j", "GPT-4o-mini", "Streamlit"],
     location: "Boston, MA",
     github: "https://github.com/manishch7/TruthDNA",

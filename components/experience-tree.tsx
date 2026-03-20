@@ -7,17 +7,29 @@ import { useIsMobile } from "@/hooks/use-mobile"
 
 const experiences = [
   {
-    company: "Humanitarians AI",
-    position: "Senior Data Analyst (Automation & Data Platforms)",
-    period: "Sep 2025 – Present",
-    location: "Remote, US",
+    company: "EarlyApply.io",
+    position: "Founder & Solo Engineer",
+    period: "Jan 2026 – Present",
+    location: "San Jose, CA",
     responsibilities: [
-      "Built automated data pipelines using n8n to ingest job and resume data from Workday, Lever, Greenhouse, and Ashby APIs, leveraging Playwright to auto-fill applications and implementing schema validation, deduplication logic, and data quality checks to ensure clean, reliable datasets flowing into Snowflake for analytics.",
+      "Architected and shipped live job intelligence platform solo: async Python scraper across 6 ATS portals (Greenhouse, Lever, Ashby, Workday, Oracle, Icims) via 200 concurrent requests every 15 min on GCP Cloud Run, Cloud Scheduler, and Cloud Build CI/CD.",
+      "Engineered Gemini 2.0 Flash classification pipeline processing 45K+ jobs in batches, extracting visa sponsorship, location, and experience signals into Supabase PostgreSQL with optimized indexing, RLS policies, and sub-second query performance.",
+      "Built Next.js 14 frontend with Supabase Auth, real-time filtering, PDF.js resume extraction, AI outreach generator (Tavily + GPT-4o), full activity tracking. Reached 100+ users and 2,400+ page visits in under 2 months with zero paid marketing.",
+    ],
+  },
+  {
+    company: "Humanitarians AI",
+    position: "Data & AI Engineer",
+    period: "Sep 2025 – Present",
+    location: "Remote, USA",
+    responsibilities: [
+      "Built Python ETL pipelines ingesting 100K+ SEC EDGAR filings and visa datasets into Snowflake, generating 30K+ employer leads with 80% reduction in manual research time.",
+      "Designed Snowflake data models and n8n-automated enrichment workflows linking company filings with ATS platforms and hiring signals across multiple public datasets.",
     ],
   },
   {
     company: "Kroll",
-    position: "Data Analyst (Compliance & Reporting)",
+    position: "Data Analyst, Compliance & Reporting",
     period: "Sep 2022 – Jul 2023",
     location: "Mumbai, IN",
     responsibilities: [
@@ -29,7 +41,7 @@ const experiences = [
   },
   {
     company: "BLC Logistics",
-    position: "Data Analyst (Operations & Business Intelligence)",
+    position: "Data Analyst, Operations & BI",
     period: "May 2020 – Aug 2022",
     location: "Mumbai, IN",
     responsibilities: [
