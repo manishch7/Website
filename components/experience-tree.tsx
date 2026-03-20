@@ -93,15 +93,13 @@ export default function ExperienceTree() {
       ref={sectionRef}
       className="py-20 min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Aurora background for the entire section */}
+      {/* Subtle background overlay */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url(/images/aurora-background.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background: "radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%)",
           transition: "opacity 1s ease-in-out",
-          opacity: isVisible ? 0.2 : 0,
+          opacity: isVisible ? 1 : 0,
         }}
       />
 
@@ -113,15 +111,11 @@ export default function ExperienceTree() {
           {/* Tree trunk - visible on desktop only */}
           {!isMobile && (
             <div
-              className={`absolute left-1/2 transform -translate-x-1/2 w-4 bg-gradient-to-t from-[#3a1c5e] to-[#6a3c9e] rounded-full transition-all duration-1000 ease-out ${isVisible ? "h-[80%] opacity-100" : "h-0 opacity-0"}`}
+              className={`absolute left-1/2 transform -translate-x-1/2 w-4 bg-gradient-to-t from-white/20 to-white/40 rounded-full transition-all duration-1000 ease-out ${isVisible ? "h-[80%] opacity-100" : "h-0 opacity-0"}`}
               style={{
                 bottom: "5%",
                 top: "15%",
-                backgroundImage: "url(/images/aurora-background.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundBlendMode: "soft-light",
-                boxShadow: "0 0 15px rgba(106, 60, 158, 0.5)",
+                boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)",
               }}
             />
           )}
@@ -146,13 +140,9 @@ export default function ExperienceTree() {
                     {/* Branch connecting to trunk (desktop only) */}
                     {!isMobile && (
                       <div
-                        className={`absolute top-1/2 transform -translate-y-1/2 h-1 bg-gradient-to-r from-[#6a3c9e] to-[#3a1c5e] z-0 ${isLeft ? "left-full" : "right-full"}`}
+                        className={`absolute top-1/2 transform -translate-y-1/2 h-1 bg-gradient-to-r from-white/30 to-white/10 z-0 ${isLeft ? "left-full" : "right-full"}`}
                         style={{
                           width: "3rem",
-                          backgroundImage: "url(/images/aurora-background.jpeg)",
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                          backgroundBlendMode: "soft-light",
                         }}
                       />
                     )}
@@ -176,23 +166,20 @@ export default function ExperienceTree() {
                               className="p-5 backdrop-blur-md flex items-center gap-4"
                               style={{
                                 background: "rgba(0, 0, 0, 0.7)",
-                                border: "1px solid rgba(160, 60, 255, 0.2)",
-                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(160, 60, 255, 0.15)",
+                                border: "1px solid rgba(255, 255, 255, 0.12)",
+                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.05)",
                               }}
                             >
                               <div
-                                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10"
                                 style={{
-                                  backgroundImage: "url(/images/aurora-background.jpeg)",
-                                  backgroundSize: "cover",
-                                  backgroundPosition: "center",
-                                  border: "1px solid rgba(160, 60, 255, 0.25)",
+                                  border: "1px solid rgba(255, 255, 255, 0.2)",
                                 }}
                               >
                                 <Briefcase className="h-6 w-6 text-white" />
                               </div>
                               <div className="flex-1">
-                                <h3 className="font-semibold text-white text-lg glow-text">{experience.position}</h3>
+                                <h3 className="font-semibold text-white text-lg">{experience.position}</h3>
                                 <p className="text-white/80">{experience.company}</p>
                                 <p className="text-sm text-white/60 mt-1">{experience.period}</p>
                               </div>
@@ -208,8 +195,8 @@ export default function ExperienceTree() {
                             style={{
                               background: "rgba(0, 0, 0, 0.8)",
                               backdropFilter: "blur(16px)",
-                              border: "1px solid rgba(160, 60, 255, 0.2)",
-                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(160, 60, 255, 0.2)",
+                              border: "1px solid rgba(255, 255, 255, 0.12)",
+                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.05)",
                             }}
                           >
                             <button
@@ -225,12 +212,9 @@ export default function ExperienceTree() {
                             <div className="mb-4">
                               <div className="flex items-center gap-4 mb-3">
                                 <div
-                                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10"
                                   style={{
-                                    backgroundImage: "url(/images/aurora-background.jpeg)",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    border: "1px solid rgba(160, 60, 255, 0.25)",
+                                    border: "1px solid rgba(255, 255, 255, 0.2)",
                                   }}
                                 >
                                   <Briefcase className="h-6 w-6 text-white" />

@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled ? "bg-background/30 backdrop-blur-xl border-b border-primary/10 shadow-sm" : "bg-transparent"
+        scrolled ? "bg-background/30 backdrop-blur-xl border-b border-white/10 shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container flex h-16 items-center justify-between">
@@ -69,7 +69,7 @@ export default function Navbar() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[240px] sm:w-[300px] cosmic-card border-primary/20">
+          <SheetContent side="right" className="w-[240px] sm:w-[300px] cosmic-card border-white/10">
             <nav className="flex flex-col gap-4 mt-8">
               {navItems.map((item) => (
                 <button

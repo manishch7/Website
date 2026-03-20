@@ -27,7 +27,7 @@ export default function Education() {
             <div key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 150}ms` }}>
               <Card className="p-6 cosmic-card h-full">
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
+                  <div className="mt-1 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 backdrop-blur-sm border border-white/15">
                     <GraduationCap className="h-5 w-5 text-primary" />
                   </div>
                   <div>

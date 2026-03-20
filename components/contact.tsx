@@ -75,14 +75,14 @@ export default function Contact() {
                   <Input
                     type="text"
                     placeholder="Name"
-                    className="bg-background/20 border-primary/20 backdrop-blur-sm"
+                    className="bg-background/20 border-white/15 backdrop-blur-sm"
                   />
                 </div>
                 <div className="space-y-2">
                   <Input
                     type="email"
                     placeholder="Email"
-                    className="bg-background/20 border-primary/20 backdrop-blur-sm"
+                    className="bg-background/20 border-white/15 backdrop-blur-sm"
                   />
                 </div>
                 <div className="space-y-2">
@@ -93,7 +93,7 @@ export default function Contact() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full rounded-full bg-primary/80 hover:bg-primary/90 backdrop-blur-sm"
+                  className="w-full rounded-full bg-white/90 hover:bg-white text-black backdrop-blur-sm"
                 >
                   Send Message
                 </Button>

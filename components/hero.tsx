@@ -24,17 +24,14 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight glow-text">
               Manish Bansilal Choudhary
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Senior Data Analyst</h2>
+            <h2 className="text-2xl md:text-3xl font-medium text-white glow-text">Founder & AI/Data Engineer</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Senior Data Analyst with 3+ years of experience delivering SQL analytics, Power BI dashboards, and
-              automated data pipelines across finance, compliance, and operations. Proven expertise in data validation,
-              reconciliation, and KPI reporting for high-volume environments. Strong background in Snowflake, Python
-              ETL, API-driven automation, and applying GenAI to enhance analytics workflows and intelligent reporting.
+              Building production-grade AI systems and data platforms. Currently scaling EarlyApply.io — a job intelligence platform serving 170+ users with 1000+ visitors and 3.5+ pages visited in 3 weeks. 3+ years shipping data pipelines, LLM integrations, and cloud infrastructure across compliance, logistics, and AI. Expertise in Python ETL, GCP Cloud Run, Supabase, Gemini 2.0, and autonomous scraping at scale.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 size="lg"
-                className="rounded-full bg-primary hover:bg-primary/90 btn-primary"
+                className="rounded-full btn-primary text-black"
                 onClick={() => {
                   const projectsSection = document.getElementById("projects")
                   if (projectsSection) {
@@ -42,12 +39,20 @@ export default function Hero() {
                   }
                 }}
               >
-                View My Projects
+                See EarlyApply & More
                 <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full"
+                onClick={() => window.open("https://earlyapply.io", "_blank")}
+              >
+                Visit EarlyApply.io →
               </Button>
             </div>
           </div>
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center backdrop-blur-sm">
+          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/15">
             <Image
               src="/profile-image.png"
               alt="Manish Bansilal Choudhary"
