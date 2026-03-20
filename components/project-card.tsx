@@ -4,7 +4,7 @@ import type React from "react"
 import { useState, useRef, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, Info, MapPin } from "lucide-react"
+import { Github, Info, MapPin, Globe, Users, Eye, TrendingUp } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 
 interface ProjectCardProps {
@@ -15,9 +15,11 @@ interface ProjectCardProps {
   icon: React.ReactNode
   github?: string
   medium?: string
+  website?: string
+  featured?: boolean
 }
 
-export default function ProjectCard({ title, description, technologies, location, icon, github, medium }: ProjectCardProps) {
+export default function ProjectCard({ title, description, technologies, location, icon, github, medium, website, featured }: ProjectCardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
   const isMobile = useIsMobile()
@@ -69,32 +71,47 @@ export default function ProjectCard({ title, description, technologies, location
       <div className="flip-card-inner relative w-full h-full">
         {/* Front of card */}
         <Card
-          className="flip-card-front absolute w-full h-full flex flex-col items-center justify-center p-6 overflow-hidden"
+          className={`flip-card-front absolute w-full h-full flex flex-col items-center justify-center p-6 overflow-hidden ${featured ? "featured-card" : ""}`}
           style={{
-            background: "rgba(0, 0, 0, 0.7)",
+            background: featured 
+              ? "linear-gradient(135deg, rgba(160, 60, 255, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%)" 
+              : "rgba(0, 0, 0, 0.7)",
             backdropFilter: "blur(16px)",
-            border: "1px solid rgba(160, 60, 255, 0.15)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.25), 0 0 12px rgba(160, 60, 255, 0.08)",
+            border: featured 
+              ? "2px solid rgba(160, 60, 255, 0.2)" 
+              : "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: featured 
+              ? "0 4px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(160, 60, 255, 0.1)" 
+              : "0 4px 30px rgba(0, 0, 0, 0.25)",
           }}
         >
-          {/* Aurora background image */}
-          <div
-            className="absolute inset-0 z-0 opacity-20"
-            style={{
-              backgroundImage: "url(/images/aurora-card-bg.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              mixBlendMode: "screen",
-            }}
-          />
-
-          <div className="relative z-10 flex flex-col items-center">
+          <div className="flex flex-col items-center">
+            {featured && <div className="text-xs font-semibold text-white/80 mb-2 px-3 py-1 rounded-full bg-white/10">PRODUCTION</div>}
             <div className="text-primary text-4xl mb-4">{icon}</div>
             <h3 className="text-xl font-semibold text-center">{title}</h3>
             <div className="flex items-center text-sm text-muted-foreground mt-4">
               <MapPin className="h-4 w-4 mr-1" />
               {location}
             </div>
+            {featured && (
+              <div className="mt-6 flex gap-4 text-center">
+                <div className="flex flex-col items-center">
+                  <Users className="h-5 w-5 text-white/60 mb-1" />
+                  <span className="text-sm font-semibold">170+</span>
+                  <span className="text-xs text-muted-foreground">Users</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Eye className="h-5 w-5 text-white/60 mb-1" />
+                  <span className="text-sm font-semibold">1K+</span>
+                  <span className="text-xs text-muted-foreground">Visitors</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <TrendingUp className="h-5 w-5 text-white/60 mb-1" />
+                  <span className="text-sm font-semibold">3.5+</span>
+                  <span className="text-xs text-muted-foreground">Pages/Visit</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {!isMobile && (
@@ -115,22 +132,11 @@ export default function ProjectCard({ title, description, technologies, location
           style={{
             background: "rgba(0, 0, 0, 0.7)",
             backdropFilter: "blur(16px)",
-            border: "1px solid rgba(160, 60, 255, 0.15)",
-            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.25), 0 0 12px rgba(160, 60, 255, 0.08)",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.25)",
           }}
         >
-          {/* Aurora background image */}
-          <div
-            className="absolute inset-0 z-0 opacity-20"
-            style={{
-              backgroundImage: "url(/images/aurora-card-bg.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              mixBlendMode: "screen",
-            }}
-          />
-
-          <div className="relative z-10 space-y-4 h-full flex flex-col">
+          <div className="space-y-4 h-full flex flex-col">
             <h3 className="text-xl font-semibold">{title}</h3>
             <p className="text-sm text-muted-foreground flex-grow">{description}</p>
             <div className="flex flex-wrap gap-2">
@@ -140,10 +146,18 @@ export default function ProjectCard({ title, description, technologies, location
                 </span>
               ))}
             </div>
-            <div className="flex items-center gap-3 mt-auto">
+            <div className="flex items-center gap-3 mt-auto flex-wrap">
+              {website && (
+                <a href={website} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <Button variant="link" className="p-0 h-auto text-white/80 hover:text-white flex items-center gap-1">
+                    <Globe className="h-4 w-4" />
+                    Live Site
+                  </Button>
+                </a>
+              )}
               {github && (
                 <a href={github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                  <Button variant="link" className="p-0 h-auto text-primary flex items-center gap-1">
+                  <Button variant="link" className="p-0 h-auto text-white/80 hover:text-white flex items-center gap-1">
                     <Github className="h-4 w-4" />
                     GitHub
                   </Button>
@@ -151,7 +165,7 @@ export default function ProjectCard({ title, description, technologies, location
               )}
               {medium && (
                 <a href={medium} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                  <Button variant="link" className="p-0 h-auto text-primary flex items-center gap-1">
+                  <Button variant="link" className="p-0 h-auto text-white/80 hover:text-white flex items-center gap-1">
                     <Info className="h-4 w-4" />
                     Medium
                   </Button>

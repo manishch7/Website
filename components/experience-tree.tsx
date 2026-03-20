@@ -7,18 +7,30 @@ import { useIsMobile } from "@/hooks/use-mobile"
 
 const experiences = [
   {
-    company: "Humanitarians AI",
-    position: "Senior Data Analyst (Automation & Data Platforms)",
-    period: "Sep 2025 – Present",
-    location: "Remote, US",
+    company: "EarlyApply.io",
+    position: "Founder & Solo Engineer",
+    period: "Jan 2026 - Present",
+    location: "San Jose, CA",
     responsibilities: [
-      "Built automated data pipelines using n8n to ingest job and resume data from Workday, Lever, Greenhouse, and Ashby APIs, leveraging Playwright to auto-fill applications and implementing schema validation, deduplication logic, and data quality checks to ensure clean, reliable datasets flowing into Snowflake for analytics.",
+      "Architected and shipped live job intelligence platform solo: async Python scraper across 6 ATS portals (Greenhouse, Lever, Ashby, Workday, Oracle, Icims) via 200 concurrent requests every 15 min on GCP Cloud Run, Cloud Scheduler, and Cloud Build CI/CD.",
+      "Engineered Gemini 2.0 Flash classification pipeline processing 45K+ jobs in batches, extracting visa sponsorship, location, and experience signals into Supabase PostgreSQL with optimized indexing, RLS policies, and sub-second query performance.",
+      "Built Next.js 14 frontend with Supabase Auth, real-time filtering, PDF.js resume extraction, AI outreach generator (Tavily + GPT-4o), full activity tracking. Reached 100+ users and 2,400+ page visits in under 2 months with zero paid marketing.",
+    ],
+  },
+  {
+    company: "Humanitarians AI",
+    position: "Data & AI Engineer",
+    period: "Sep 2025 - Present",
+    location: "Remote, USA",
+    responsibilities: [
+      "Built Python ETL pipelines ingesting 100K+ SEC EDGAR filings and visa datasets into Snowflake, generating 30K+ employer leads with 80% reduction in manual research time.",
+      "Designed Snowflake data models and n8n-automated enrichment workflows linking company filings with ATS platforms and hiring signals across multiple public datasets.",
     ],
   },
   {
     company: "Kroll",
-    position: "Data Analyst (Compliance & Reporting)",
-    period: "Sep 2022 – Jul 2023",
+    position: "Data Analyst, Compliance & Reporting",
+    period: "Sep 2022 - Jul 2023",
     location: "Mumbai, IN",
     responsibilities: [
       "Supported end-to-end data operations for T-Mobile's $350M data breach settlement affecting 76M customers, delivering validation reports and compliance dashboards that passed all audits with zero findings.",
@@ -29,8 +41,8 @@ const experiences = [
   },
   {
     company: "BLC Logistics",
-    position: "Data Analyst (Operations & Business Intelligence)",
-    period: "May 2020 – Aug 2022",
+    position: "Data Analyst, Operations & BI",
+    period: "May 2020 - Aug 2022",
     location: "Mumbai, IN",
     responsibilities: [
       "Analyzed delivery delays by integrating dispatch records, GPS tracking data, and vendor performance reports, enabling operations teams to identify root causes and significantly improve issue resolution speed.",
@@ -43,7 +55,7 @@ const experiences = [
   {
     company: "Motilal Oswal Financial Services",
     position: "Research Analyst Intern",
-    period: "Apr 2019 – Jul 2019",
+    period: "Apr 2019 - Jul 2019",
     location: "Thane, IN",
     responsibilities: [
       "Conducted equity research by analyzing company financial statements, macroeconomic indicators, and sector trends to support valuation analysis, investment decision making, and long-term portfolio recommendations for retail investors.",
@@ -93,15 +105,13 @@ export default function ExperienceTree() {
       ref={sectionRef}
       className="py-20 min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Aurora background for the entire section */}
+      {/* Subtle background overlay */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url(/images/aurora-background.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background: "radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%)",
           transition: "opacity 1s ease-in-out",
-          opacity: isVisible ? 0.2 : 0,
+          opacity: isVisible ? 1 : 0,
         }}
       />
 
@@ -113,15 +123,11 @@ export default function ExperienceTree() {
           {/* Tree trunk - visible on desktop only */}
           {!isMobile && (
             <div
-              className={`absolute left-1/2 transform -translate-x-1/2 w-4 bg-gradient-to-t from-[#3a1c5e] to-[#6a3c9e] rounded-full transition-all duration-1000 ease-out ${isVisible ? "h-[80%] opacity-100" : "h-0 opacity-0"}`}
+              className={`absolute left-1/2 transform -translate-x-1/2 w-4 bg-gradient-to-t from-white/20 to-white/40 rounded-full transition-all duration-1000 ease-out ${isVisible ? "h-[80%] opacity-100" : "h-0 opacity-0"}`}
               style={{
                 bottom: "5%",
                 top: "15%",
-                backgroundImage: "url(/images/aurora-background.jpeg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundBlendMode: "soft-light",
-                boxShadow: "0 0 15px rgba(106, 60, 158, 0.5)",
+                boxShadow: "0 0 15px rgba(255, 255, 255, 0.2)",
               }}
             />
           )}
@@ -146,13 +152,9 @@ export default function ExperienceTree() {
                     {/* Branch connecting to trunk (desktop only) */}
                     {!isMobile && (
                       <div
-                        className={`absolute top-1/2 transform -translate-y-1/2 h-1 bg-gradient-to-r from-[#6a3c9e] to-[#3a1c5e] z-0 ${isLeft ? "left-full" : "right-full"}`}
+                        className={`absolute top-1/2 transform -translate-y-1/2 h-1 bg-gradient-to-r from-white/30 to-white/10 z-0 ${isLeft ? "left-full" : "right-full"}`}
                         style={{
                           width: "3rem",
-                          backgroundImage: "url(/images/aurora-background.jpeg)",
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                          backgroundBlendMode: "soft-light",
                         }}
                       />
                     )}
@@ -176,23 +178,20 @@ export default function ExperienceTree() {
                               className="p-5 backdrop-blur-md flex items-center gap-4"
                               style={{
                                 background: "rgba(0, 0, 0, 0.7)",
-                                border: "1px solid rgba(160, 60, 255, 0.2)",
-                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(160, 60, 255, 0.15)",
+                                border: "1px solid rgba(255, 255, 255, 0.12)",
+                                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.05)",
                               }}
                             >
                               <div
-                                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10"
                                 style={{
-                                  backgroundImage: "url(/images/aurora-background.jpeg)",
-                                  backgroundSize: "cover",
-                                  backgroundPosition: "center",
-                                  border: "1px solid rgba(160, 60, 255, 0.25)",
+                                  border: "1px solid rgba(255, 255, 255, 0.2)",
                                 }}
                               >
                                 <Briefcase className="h-6 w-6 text-white" />
                               </div>
                               <div className="flex-1">
-                                <h3 className="font-semibold text-white text-lg glow-text">{experience.position}</h3>
+                                <h3 className="font-semibold text-white text-lg">{experience.position}</h3>
                                 <p className="text-white/80">{experience.company}</p>
                                 <p className="text-sm text-white/60 mt-1">{experience.period}</p>
                               </div>
@@ -208,8 +207,8 @@ export default function ExperienceTree() {
                             style={{
                               background: "rgba(0, 0, 0, 0.8)",
                               backdropFilter: "blur(16px)",
-                              border: "1px solid rgba(160, 60, 255, 0.2)",
-                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(160, 60, 255, 0.2)",
+                              border: "1px solid rgba(255, 255, 255, 0.12)",
+                              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.05)",
                             }}
                           >
                             <button
@@ -225,12 +224,9 @@ export default function ExperienceTree() {
                             <div className="mb-4">
                               <div className="flex items-center gap-4 mb-3">
                                 <div
-                                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-white/10"
                                   style={{
-                                    backgroundImage: "url(/images/aurora-background.jpeg)",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    border: "1px solid rgba(160, 60, 255, 0.25)",
+                                    border: "1px solid rgba(255, 255, 255, 0.2)",
                                   }}
                                 >
                                   <Briefcase className="h-6 w-6 text-white" />
