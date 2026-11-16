@@ -9,9 +9,10 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Manish Choudhary | Senior Data Analyst",
-  description: "Portfolio of Manish Bansilal Choudhary, Senior Data Analyst",
-    generator: 'v0.app'
+  title: "Manish Choudhary | Forward Deployed Engineer",
+  description:
+    "Manish Choudhary is a forward deployed engineer building AI, data, and automation systems with customers. 1,050+ EarlyApply users, 93% commission automation, and 8× faster onboarding.",
+  generator: "v0.app"
 }
 
 export default function RootLayout({

@@ -19,6 +19,15 @@ import {
 
 const projects = [
   {
+    title: "EarlyApply.io — AI Job Search Platform",
+    icon: <Briefcase />,
+    description:
+      "Solo-built and launched an AI-powered job-search platform that grew to 1,050+ users with no paid promotion. An AI pipeline classifies 1M+ jobs into a fast, searchable feed, while a scraper covers 23K+ companies and eight job portals. Kept the product online through two coordinated DDoS attacks totaling 800K+ requests with zero downtime. Built personalized outreach and founder data for 5K+ companies based on direct user feedback.",
+    technologies: ["TypeScript", "React", "Next.js", "AI/ML", "Data Pipelines", "Cloudflare"],
+    location: "San Francisco, CA",
+    github: "https://earlyapply.io",
+  },
+  {
     title: "Workday Job Scraper & Automation Pipeline",
     icon: <Briefcase />,
     description:

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
@@ -24,13 +24,26 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight glow-text">
               Manish Bansilal Choudhary
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">Senior Data Analyst</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Forward Deployed Engineer</p>
+            <h2 className="text-2xl md:text-3xl font-medium text-primary glow-text">AI, data & automation in the real world</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Senior Data Analyst with 3+ years of experience delivering SQL analytics, Power BI dashboards, and
-              automated data pipelines across finance, compliance, and operations. Proven expertise in data validation,
-              reconciliation, and KPI reporting for high-volume environments. Strong background in Snowflake, Python
-              ETL, API-driven automation, and applying GenAI to enhance analytics workflows and intelligent reporting.
+              I work side by side with customers to turn messy, high-stakes workflows into reliable software. Across
+              insurance, recruiting, finance, and operations, I build the integrations, AI systems, and data products
+              that solve problems at the root—from discovery and technical scoping through deployment and iteration.
             </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl pt-2" aria-label="Career highlights">
+              {[
+                ["1,050+", "EarlyApply users"],
+                ["1M+", "jobs classified"],
+                ["93%", "automation achieved"],
+                ["8×", "faster onboarding"],
+              ].map(([value, label]) => (
+                <div key={label} className="rounded-xl border border-primary/15 bg-background/40 p-3 backdrop-blur-sm">
+                  <p className="text-xl font-bold text-foreground">{value}</p>
+                  <p className="mt-1 text-xs leading-snug text-muted-foreground">{label}</p>
+                </div>
+              ))}
+            </div>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 size="lg"
