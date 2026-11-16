@@ -7,12 +7,38 @@ import { useIsMobile } from "@/hooks/use-mobile"
 
 const experiences = [
   {
+    company: "Ascend",
+    position: "Solutions Engineer",
+    period: "Jun 2026 – Present",
+    location: "San Francisco, CA",
+    responsibilities: [
+      "Owned automated commission-statement collection across hundreds of insurance carrier portals, raising end-to-end automation from 32% to 93%.",
+      "Increased customer onboarding throughput 8×, from one organization per month to two per week, by making carrier onboarding configuration-driven instead of custom-coded.",
+      "Built hourly extraction, policy and payer matching, and agency management-system sync pipelines; designed normalized data models and logging to keep records accurate and failures diagnosable.",
+      "Created monitoring for broken carrier logins and AI-assisted verification-code handling, plus an AI alert assistant that groups customer issues and helps engineers find root causes.",
+      "Partnered directly with customers, Customer Success, Product, and Engineering to diagnose issues, clarify requirements, and align delivery priorities.",
+    ],
+  },
+  {
+    company: "EarlyApply.io",
+    position: "Founder & Product Engineer",
+    period: "Feb 2026 – Present",
+    location: "San Francisco, CA",
+    responsibilities: [
+      "Solo-built and launched an AI-powered job-search platform that grew to 1,050+ users with no paid promotion, owning product, design, and infrastructure end to end.",
+      "Built an AI pipeline that classifies 1M+ jobs and serves them in a fast, searchable feed.",
+      "Built a scraper covering 23K+ companies and eight job portals; kept the product online through two coordinated DDoS attacks totaling 800K+ requests with zero downtime.",
+      "Talked directly with users and shipped requested features, including personalized outreach messages and founder data across 5K+ companies.",
+    ],
+  },
+  {
     company: "Humanitarians AI",
-    position: "Senior Data Analyst (Automation & Data Platforms)",
-    period: "Sep 2025 – Present",
+    position: "AI Solutions Engineer",
+    period: "May 2025 – May 2026",
     location: "Remote, US",
     responsibilities: [
-      "Built automated data pipelines using n8n to ingest job and resume data from Workday, Lever, Greenhouse, and Ashby APIs, leveraging Playwright to auto-fill applications and implementing schema validation, deduplication logic, and data quality checks to ensure clean, reliable datasets flowing into Snowflake for analytics.",
+      "Built a research pipeline over 100K+ SEC filings, cutting an external team's research time by 80% and finding 30K+ qualified accounts.",
+      "Modeled Snowflake schemas and built n8n workflows linking company filings with live hiring signals; partnered with Sales to shape actionable account lists.",
     ],
   },
   {
